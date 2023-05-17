@@ -2,6 +2,17 @@
 
 Authenticator plugins for [Requests] that support JWT bearer tokens.
 
+## Description
+
+This package contains two classes, `HTTPBearerAuth` and `JWTSecretAuth`,
+that implement the [AuthBase] interface from the [Requests] package. The
+`HTTPBearerAuth` class takes a single bearer token value at initialization,
+and adds that to an `Authorization: Bearer` header. The
+`JWTSecretAuth` class takes a shared secret, and uses that to generate and
+sign short-lived [JWT] tokens to be added to an `Authorization: Bearer`
+request header. By default, these tokens are valid for 1 hour (3600
+seconds), and may contain arbitrary [JWT claims] in their payload.
+
 ## Dependencies
 
 * Python 3.8+
@@ -70,15 +81,22 @@ pip install -e .[test]
 
 #### Testing
 
+Using [pytest]:
+
 ```bash
 pytest
 ```
 
-With test coverage information:
+With [test coverage] information:
 
 ```bash
 pytest --cov-report=term-missing --cov src
 ```
 
 [Requests]: https://pypi.org/project/requests/
+[AuthBase]: https://docs.python-requests.org/en/latest/user/authentication/#new-forms-of-authentication
 [JWCrypto]: https://pypi.org/project/jwcrypto/
+[JWT]: https://datatracker.ietf.org/doc/html/rfc7519
+[JWT claims]: https://datatracker.ietf.org/doc/html/rfc7519#section-4
+[pytest]: https://docs.pytest.org/en/latest/
+[test coverage]: https://pytest-cov.readthedocs.io/en/latest/
