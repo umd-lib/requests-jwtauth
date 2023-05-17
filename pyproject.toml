@@ -1,0 +1,22 @@
+[project]
+name = "requests-jwtauth"
+version = "1.0.0-dev"
+description = "Authenticator plugins for Requests that support JWT bearer tokens"
+readme = "README.md"
+dependencies = [
+    "jwcrypto",
+    "requests"
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: Apache Software License",
+]
+
+[project.optional-dependencies]
+test = [
+    "freezegun",
+    "pytest",
+    "pytest-cov",
+]
