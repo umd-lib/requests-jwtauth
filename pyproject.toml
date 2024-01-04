@@ -2,6 +2,12 @@
 name = "requests-jwtauth"
 version = "1.0.0"
 description = "Authenticator plugins for Requests that support JWT bearer tokens"
+authors = [
+    {name = "Peter Eichman", email = "peichman@umd.edu"},
+]
+maintainers = [
+    {name = "UMD Libraries", email = "lib-ssdr@umd.edu"},
+]
 readme = "README.md"
 dependencies = [
     "jwcrypto",
@@ -14,6 +20,9 @@ classifiers = [
     "Operating System :: OS Independent",
     "License :: OSI Approved :: Apache Software License",
 ]
+
+[project.urls]
+Repository = "https://github.com/umd-lib/requests-jwtauth"
 
 [project.optional-dependencies]
 test = [

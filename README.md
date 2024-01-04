@@ -21,21 +21,8 @@ seconds), and may contain arbitrary [JWT claims] in their payload.
 
 ## Installation
 
-With **pip**:
-
 ```bash
-pip install git+https://github.com/umd-lib/requests-jwtauth.git
-```
-
-In your **pyproject.toml** file:
-
-```toml
-[project]
-# ...
-dependencies = [
-    "requests-jwtauth@git+https://github.com/umd-lib/requests-jwtauth.git"
-    # ...
-]
+pip install requests-jwtauth
 ```
 
 ## Usage
@@ -92,7 +79,7 @@ source .venv/bin/activate
 pip install -e .[test]
 ```
 
-#### Testing
+### Testing
 
 Using [pytest]:
 
